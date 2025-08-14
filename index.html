@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add" />
+</head>
+<body>
+  <div style="background-color: rgb(9, 9, 114);display: flex;justify-content: center;align-items: center; width: 100%;height: 100vh;padding: 0;margin: 0;">
+  <div style="width:40%;height: 5px;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+   <div style="width: 100%;display: flex;justify-content: center;align-items: center;background-color: blueviolet;">
+    <h2 style="width: 90%;">مهامي</h2>
+   <button id="add" style="border-radius: 20px;"><span class="material-symbols-outlined">
+add
+</span></button> 
+   </div>
+    <div id="tasks-list" style="width: 100%;background-color: aliceblue;display: flex;flex-direction: column;justify-content: center;align-items: center;"></div>
+  </div>
+
+</div>
+
+
+
+
+<script>
+  
+  document.getElementById("add").addEventListener("click", function(){
+    let TaskList = document.getElementById("tasks-list")
+   const TaskName = document.createTextNode(prompt("أدخل مهمة جديدة"))
+   const taskElement = document.createElement("h2")
+   const brElement = document.createElement("br")
+    const divElement = document.createElement("div")
+    taskElement.appendChild(TaskName)
+    divElement.appendChild(taskElement)
+    TaskList.appendChild(divElement)
+    TaskList.appendChild(brElement)
+
+    divElement.style.width = '98%'
+    divElement.style.height = '50%'
+    divElement.style.borderRadius = '15px'
+
+  })
+
+</script>
+</body>
+</html>
